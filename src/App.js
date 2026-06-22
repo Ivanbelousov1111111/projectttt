@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Biography from './pages/Biography';
-import Music from './pages/Music';
-import Merch from './pages/Merch';
-import Cart from './pages/Cart';
+import Header from './components/Header.js';
+import Home from './pages/Home.js';
+import Biography from './pages/Biography.js';
+import Music from './pages/Music.js';
+import Merch from './pages/Merch.js';
+import Cart from './pages/Cart.js';
 import './App.css';
 
 function App() {

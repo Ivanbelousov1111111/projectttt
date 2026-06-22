@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState,useEffect} from 'react';
 import './Music.css';
 
 const albums = [
@@ -19,6 +19,7 @@ const tracks = [
   { id: 5, name: 'Trippie Redd, Playboi Carti - Miss The Rage', img: '/img/orig (1).webp' },
   { id: 6, name: 'Playboi Carti - Sky', img: '/img/orig (1).webp' }
 ];
+
 
 function Music() {
   const [offset, setOffset] = useState(0);
@@ -76,6 +77,18 @@ function Music() {
     alert("Заявка отправлена!");
     setFormData({ name: '', email: '', phone: '', date: '' });
   };
+   const handle = (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+
+        // Отправляем данные на твой PHP-файл
+        fetch('http://localhost/login.php', {
+            method: 'POST', })
+        .then(res => res.text())
+        .then(msg => alert(msg))
+        .catch(err => console.error(err));
+    };
+
 
   return (
     <div className="music-page">

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Biography.css';
+import './Biografy.css';
 
 const albumsList = [
   "Whole Lotta Red (2020)",
