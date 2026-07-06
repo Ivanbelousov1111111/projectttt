@@ -1,0 +1,72 @@
+
+
+.merch-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: sans-serif;
+  color: #000;
+}
+
+
+.section-title {
+  text-align: center;
+  font-size: 22px;
+  margin: 50px 0 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 150px;
+}
+
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 3 / 4; 
+  object-fit: cover;   
+  background-color: #f5f5f5;
+}
+
+
+.product-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 12px 0 4px;
+  text-transform: uppercase;
+}
+
+.product-price {
+  font-size: 13px;
+  color: #555;
+}
+
+
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .section-title {
+    font-size: 18px;
+    margin: 30px 0 15px;
+  }
+}
