@@ -29,6 +29,9 @@
   display: flex;
   flex-direction: column;
 }
+img:hover{
+  transform: scale(1,1);
+}
 
 
 .product-image {

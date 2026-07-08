@@ -10,13 +10,12 @@ function Music() {
   const step = 300;
   const listRef = useRef(null);
 
-  // Загрузка данных с сервера
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
         
-        // Загрузка альбомов
+       
         const albumsResponse = await fetch('http://localhost/music.php');
         if (!albumsResponse.ok) {
           throw new Error(`Ошибка загрузки альбомов: ${albumsResponse.status}`);
@@ -24,7 +23,7 @@ function Music() {
         const albumsData = await albumsResponse.json();
         setAlbums(albumsData);
 
-        // Загрузка треков
+        
         const tracksResponse = await fetch('http://localhost/tracks.php');
         if (!tracksResponse.ok) {
           throw new Error(`Ошибка загрузки треков: ${tracksResponse.status}`);
@@ -36,7 +35,7 @@ function Music() {
       } catch (err) {
         console.error('Ошибка при загрузке данных:', err);
         setError(err.message);
-        // Используем тестовые данные в случае ошибки
+        
         setAlbums([
           { id: 1, year: 2023, name: 'Тестовый альбом 1', img: 'https://via.placeholder.com/150' },
           { id: 2, year: 2022, name: 'Тестовый альбом 2', img: 'https://via.placeholder.com/150' }
@@ -164,9 +163,13 @@ function Music() {
             <li key={track.id} className="track">
               <img src={track.img} alt="" className="track__img" />
               <span className="track__name">{track.name}</span>
+              <button>◀</button>
+              <button>❚❚</button>
+              <button>▶</button>
             </li>
           ))}
         </ul>
+       
       </section>
 
       <section className="container">
