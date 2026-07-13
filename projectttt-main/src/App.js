@@ -6,6 +6,7 @@ import Music from './pages/Music.js';
 import Merch from './pages/Merch.js';
 import Cart from './pages/Cart.js';
 import './App.css';
+import RegisterPage from './pages/RegisterPage.js';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/music" element={<Music />} />
             <Route path="/merch" element={<Merch />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path='register' element={<RegisterPage/>}/>
           </Routes>
         </main>
       </div>

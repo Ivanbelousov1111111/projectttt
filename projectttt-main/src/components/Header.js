@@ -15,7 +15,7 @@ function Header() {
           <Link className="nav-item" to="/merch">МЕРЧ</Link>
           <Link className="nav-item" to="/music">МУЗЫКА</Link>
           <Link className="nav-item" to="/cart">КОРЗИНА</Link>
-          <Link className='nav-item' ><span className=' btn'>РЕГИСТРАЦИЯ</span></Link>
+          <Link className='nav-item' to="/register"><span className='btn'>РЕГИСТРАЦИЯ</span></Link>
           <Link className='nav-item'><span className='btn'>ВОЙТИ</span></Link>
         </div>
       </div>
